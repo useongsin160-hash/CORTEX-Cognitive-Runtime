@@ -1,4 +1,4 @@
-# CORTEX 1.0 OVERTURE
+# CORTEX 1.0(5.0) OVERTURE
 
 **한국어** | [English](./README.en.md)
 
