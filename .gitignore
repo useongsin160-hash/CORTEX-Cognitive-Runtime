@@ -1,0 +1,46 @@
+.env
+*.env
+!.env.example
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+.venv/
+venv/
+
+data/
+
+# Auto-generated measurement artifacts (commit noise prevention)
+# 주의: 이미 tracked된 파일은 이 무시 규칙으로 untrack되지 않는다.
+# Phase 5 STEP 7 closeout 시점 정책. git rm --cached는 수행하지 않음.
+docs/measurements/regression_latency_*.json
+docs/measurements/regression_latency_*.md
+docs/measurements/similarity_distribution_step3_1.json
+docs/measurements/similarity_distribution_step3_1.md
+
+# Keep explicit phase measurement artifacts
+!docs/measurements/phase*_step*_*.json
+!docs/measurements/phase*_step*_*.md
+multilingual-e5-base.tar.gz
+multilingual-e5-base*/
+*.tar.gz
+*.safetensors
+test_result*.txt
+config/tier_slots.json
+
+# 벡터 DB (공개 제외 — orphan add 시 빠짐)
+cortex_chroma_db/
+cortex_chroma_db_old/
+
+# Windows 잡파일
+desktop.ini
+
+# 과거 버전 코드 (공개 제외 — 하드코딩 키 등 포함)
+legacy/

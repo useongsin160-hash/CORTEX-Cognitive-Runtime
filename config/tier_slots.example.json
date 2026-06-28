@@ -1,0 +1,57 @@
+{
+  "_README": [
+    "CORTEX-AEV Tier Slot Registry — 설정 양식 (docs/TIER_SLOT_REGISTRY_DESIGN.md v0.3).",
+    "사용법: 이 파일을 config/tier_slots.json 으로 복사한 뒤 5칸의 base_url 과 키를 채우세요.",
+    "이 양식은 멀티 벤더 예시입니다 — 3종 protocol(openai_compatible / anthropic / google)을 섞어 tier마다 다른 모델을 꽂았습니다. 슬롯은 벤더 무관이라 어떤 칸에 어떤 protocol 도 올 수 있습니다.",
+    "각 칸은 완전히 독립적인 API 입니다 (base_url / api_key_env / protocol / model).",
+    "회사명/모델명은 예시일 뿐이며, 같은 회사를 여러 칸에 써도 CORTEX 눈에는 독립 API 입니다.",
+    "model 값('your-...')은 placeholder 입니다 — 실제 모델 식별자로 교체하세요.",
+    "base_url 은 일부러 비워 배포합니다 — 채우기 전에는 preflight 가 INCOMPLETE(→ NO-GO)로 미완성을 정직하게 보고합니다. 실제 엔드포인트로 채우세요.",
+    "api_key_env 에는 '환경변수 이름'만 적습니다. 실제 키 값을 이 파일에 넣지 마세요 (.env 로만).",
+    "5칸 모두 정의해야 합니다(partial 불허). 단, 같은 api_key_env/base_url/model 을 여러 칸에 재사용해도 됩니다 — 2~3개 키로 5칸을 채워 live smoke 가능. (docs/demo/LIVE_LLM_RUNBOOK.md 참조)",
+    "로컬/무인증 API 는 allow_empty_api_key=true 로 두고 키 없이 쓸 수 있습니다.",
+    "protocol 은 알려진 양식 이름이어야 합니다: openai_compatible | anthropic | google (V1 기준).",
+    "이 _README 키와 _ 로 시작하는 키는 로더가 무시합니다 (주석 용도).",
+    "설정 점검: python scripts/check_llm_slots.py --path config/tier_slots.json"
+  ],
+
+  "LIGHTWEIGHT": {
+    "base_url": "",
+    "api_key_env": "CORTEX_SLOT_LIGHTWEIGHT_KEY",
+    "protocol": "openai_compatible",
+    "model": "your-small-fast-model",
+    "allow_empty_api_key": false
+  },
+
+  "MEDIUM": {
+    "base_url": "",
+    "api_key_env": "CORTEX_SLOT_MEDIUM_KEY",
+    "protocol": "google",
+    "model": "your-mid-tier-model",
+    "allow_empty_api_key": false
+  },
+
+  "STANDARD": {
+    "base_url": "",
+    "api_key_env": "CORTEX_SLOT_STANDARD_KEY",
+    "protocol": "anthropic",
+    "model": "your-standard-model",
+    "allow_empty_api_key": false
+  },
+
+  "HEAVY": {
+    "base_url": "",
+    "api_key_env": "CORTEX_SLOT_HEAVY_KEY",
+    "protocol": "openai_compatible",
+    "model": "your-large-model",
+    "allow_empty_api_key": false
+  },
+
+  "DEEP_THINKING": {
+    "base_url": "",
+    "api_key_env": "CORTEX_SLOT_DEEP_KEY",
+    "protocol": "anthropic",
+    "model": "your-deep-reasoning-model",
+    "allow_empty_api_key": false
+  }
+}

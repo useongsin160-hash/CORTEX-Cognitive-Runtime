@@ -1,0 +1,95 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "language": "ko+en (paired)",
+    "embedding_strategy": "bilingual_average",
+    "created_at": "2026-05-12T00:00:00Z",
+    "migration_note": "v1.1 영문-only canonical에서 한영 페어로 전환. 한국어 쿼리의 cross-lingual 매치율 확보 목적."
+  },
+  "categories": {
+    "coding": [
+      {"id": "coding_001", "type": "canonical", "en": "write a python function to sort a list of dictionaries by a key", "ko": "딕셔너리 리스트를 특정 키 기준으로 정렬하는 파이썬 함수 작성"},
+      {"id": "coding_002", "type": "canonical", "en": "debug this null pointer exception in the java service layer", "ko": "자바 서비스 계층에서 발생하는 NullPointerException 디버깅"},
+      {"id": "coding_003", "type": "canonical", "en": "refactor this large class into smaller composable units", "ko": "이 거대한 클래스를 더 작은 조합 가능한 단위로 리팩토링"},
+      {"id": "coding_004", "type": "canonical", "en": "fix the typescript generic function signature for this hook", "ko": "이 훅을 위한 타입스크립트 제네릭 함수 시그니처 수정"},
+      {"id": "coding_005", "type": "canonical", "en": "find the n+1 problem hidden in this sql query and rewrite it", "ko": "이 SQL 쿼리에 숨은 N+1 문제를 찾아서 다시 작성"},
+      {"id": "coding_006", "type": "canonical", "en": "rust borrow checker rejects this code, explain why and patch it", "ko": "러스트 borrow checker가 막는 코드, 이유 설명 후 수정"},
+      {"id": "coding_007", "type": "canonical", "en": "async/await fetch example in javascript with error handling", "ko": "에러 처리가 포함된 자바스크립트 async/await fetch 예제"},
+      {"id": "coding_008", "type": "edge_case", "en": "i can't figure out why this isn't working, my head hurts", "ko": "왜 안 돌아가는지 모르겠어... 머리 아파"},
+      {"id": "coding_009", "type": "edge_case", "en": "the build has been broken since yesterday, what's wrong", "ko": "어제부터 빌드가 깨졌는데 뭐가 잘못된 거지"},
+      {"id": "coding_010", "type": "edge_case", "en": "go through this code line by line and tell me what's off", "ko": "한 줄 한 줄 천천히 봐줘 어디가 이상한지"}
+    ],
+    "game_design": [
+      {"id": "game_design_001", "type": "canonical", "en": "design the main quest line for a story-driven rpg with five chapters", "ko": "5챕터 구성의 스토리 중심 RPG 메인 퀘스트 라인 기획"},
+      {"id": "game_design_002", "type": "canonical", "en": "create a boss npc phase transition mechanic with three escalation stages", "ko": "3단계 강화 페이즈가 있는 보스 NPC 페이즈 전환 메커닉 설계"},
+      {"id": "game_design_003", "type": "canonical", "en": "design the tutorial level so players learn three core skills naturally", "ko": "플레이어가 3가지 핵심 스킬을 자연스럽게 익히는 튜토리얼 레벨 디자인"},
+      {"id": "game_design_004", "type": "canonical", "en": "balance side quest rewards across the open world economy", "ko": "오픈월드 경제 안에서 사이드 퀘스트 보상 밸런싱"},
+      {"id": "game_design_005", "type": "canonical", "en": "design a pvp matchmaking system with elo distribution rules", "ko": "ELO 분포 규칙이 적용된 PvP 매치메이킹 시스템 설계"},
+      {"id": "game_design_006", "type": "canonical", "en": "roguelike procedural dungeon generation rules and seed parameters", "ko": "로그라이크 절차적 던전 생성 규칙과 시드 파라미터"},
+      {"id": "game_design_007", "type": "canonical", "en": "co-op game role split mechanism for a four player party composition", "ko": "4인 파티 구성의 협동 게임 역할 분담 메커니즘"},
+      {"id": "game_design_008", "type": "edge_case", "en": "players say the boss fight is too easy and boring, what should i do", "ko": "보스가 너무 쉬워서 재미없다는 피드백 받았는데 어떡하지"},
+      {"id": "game_design_009", "type": "edge_case", "en": "our game's character names feel a little weak honestly", "ko": "우리 게임 캐릭터 이름이 좀 별로인 것 같아"},
+      {"id": "game_design_010", "type": "edge_case", "en": "lots of players find the first 30 minutes boring, want to fix that", "ko": "초반 30분이 지루하다는 의견이 많은데 손보고 싶어"}
+    ],
+    "math_logic": [
+      {"id": "math_logic_001", "type": "canonical", "en": "derive the closed-form expression for the fibonacci sequence", "ko": "피보나치 수열의 일반항 공식 유도"},
+      {"id": "math_logic_002", "type": "canonical", "en": "analyze the time complexity of this algorithm in big-o notation", "ko": "이 알고리즘의 시간 복잡도를 Big-O 표기로 분석"},
+      {"id": "math_logic_003", "type": "canonical", "en": "explain bayes theorem using a medical diagnosis worked example", "ko": "의료 진단 예시로 베이즈 정리 설명"},
+      {"id": "math_logic_004", "type": "canonical", "en": "solve this partial differential equation by separation of variables", "ko": "변수 분리법으로 이 편미분 방정식 풀이"},
+      {"id": "math_logic_005", "type": "canonical", "en": "prove the np-completeness of the graph coloring decision problem", "ko": "그래프 색칠 판정 문제의 NP-완전성 증명"},
+      {"id": "math_logic_006", "type": "canonical", "en": "geometric interpretation of a matrix with a zero eigenvalue", "ko": "고윳값이 0인 행렬의 기하학적 해석"},
+      {"id": "math_logic_007", "type": "canonical", "en": "derive the mean and variance of the binomial distribution", "ko": "이항분포의 평균과 분산 유도"},
+      {"id": "math_logic_008", "type": "edge_case", "en": "how do i compute this", "ko": "이거 계산 어떻게 함?"},
+      {"id": "math_logic_009", "type": "edge_case", "en": "the numbers look wrong, i think i added something incorrectly", "ko": "숫자가 이상하게 나오는데 뭔가 잘못 더한 것 같아"},
+      {"id": "math_logic_010", "type": "edge_case", "en": "the probability result doesn't match my intuition, why is that", "ko": "확률 계산이 직관과 안 맞는데 왜 그런지 모르겠어"}
+    ],
+    "writing": [
+      {"id": "writing_001", "type": "canonical", "en": "draft the opening paragraph of a science fiction short story about frozen time", "ko": "시간이 멈추는 SF 단편의 첫 문단 작성"},
+      {"id": "writing_002", "type": "canonical", "en": "translate this english business email into natural korean", "ko": "이 영문 업무 이메일을 자연스러운 한국어로 번역"},
+      {"id": "writing_003", "type": "canonical", "en": "write a corporate blog post announcing a new product launch", "ko": "신제품 출시를 알리는 기업 블로그 글 작성"},
+      {"id": "writing_004", "type": "canonical", "en": "summarize the team retrospective minutes into a one page brief", "ko": "팀 회고 회의록을 한 페이지 요약으로 정리"},
+      {"id": "writing_005", "type": "canonical", "en": "polish the self-introduction paragraph of my resume to sound stronger", "ko": "이력서의 자기소개 문단을 더 매력적으로 다듬기"},
+      {"id": "writing_006", "type": "canonical", "en": "compose an essay describing a rainy afternoon by the riverside", "ko": "강가의 비 오는 오후를 묘사한 수필 작성"},
+      {"id": "writing_007", "type": "canonical", "en": "translate this japanese short story into idiomatic korean prose", "ko": "이 일본어 단편을 자연스러운 한국어 산문으로 번역"},
+      {"id": "writing_008", "type": "edge_case", "en": "take a look at what i wrote", "ko": "내가 쓴 거 봐줘"},
+      {"id": "writing_009", "type": "edge_case", "en": "i'd love this sentence rewritten more smoothly", "ko": "이 문장 좀 더 부드럽게 바꿔주면 좋겠는데"},
+      {"id": "writing_010", "type": "edge_case", "en": "i need to write an apology letter to a friend, how do i start", "ko": "친구한테 사과 편지를 써야 하는데 어떻게 시작하지"}
+    ],
+    "data_analysis": [
+      {"id": "data_analysis_001", "type": "canonical", "en": "visualize monthly revenue trends from this csv with rolling averages", "ko": "이 CSV에서 이동 평균을 적용한 월별 매출 추세 시각화"},
+      {"id": "data_analysis_002", "type": "canonical", "en": "build a logistic regression model for customer churn prediction", "ko": "고객 이탈 예측을 위한 로지스틱 회귀 모델 구축"},
+      {"id": "data_analysis_003", "type": "canonical", "en": "run a statistical significance test on this a/b experiment result", "ko": "이 A/B 테스트 결과의 통계적 유의성 검정"},
+      {"id": "data_analysis_004", "type": "canonical", "en": "decompose this time series into seasonal trend and residual components", "ko": "이 시계열을 계절성, 추세, 잔차 성분으로 분해"},
+      {"id": "data_analysis_005", "type": "canonical", "en": "detect outliers in this dataset using the iqr rule and report them", "ko": "IQR 규칙으로 이 데이터셋의 이상치를 탐지하고 보고"},
+      {"id": "data_analysis_006", "type": "canonical", "en": "plot a bar chart of ltv distribution segmented by user cohort", "ko": "사용자 코호트별 LTV 분포 막대그래프"},
+      {"id": "data_analysis_007", "type": "canonical", "en": "run a two-sample t-test to compare conversion rates between two groups", "ko": "두 그룹의 전환율 비교를 위한 양측 t-검정 수행"},
+      {"id": "data_analysis_008", "type": "edge_case", "en": "look at this excel table and tell me what looks off", "ko": "엑셀 표 보고 뭐가 이상한지 알려줘"},
+      {"id": "data_analysis_009", "type": "edge_case", "en": "find where the outlier values are in these numbers", "ko": "이 숫자들 중에서 튀는 값이 어디 있는지 찾아줘"},
+      {"id": "data_analysis_010", "type": "edge_case", "en": "can you check whether there's a pattern in this data", "ko": "데이터에서 패턴이 보이는지 한 번 봐줄래"}
+    ],
+    "system_design": [
+      {"id": "system_design_001", "type": "canonical", "en": "design a message queue architecture for a chat service with tens of millions of users", "ko": "수천만 사용자의 채팅 서비스 메시지 큐 아키텍처 설계"},
+      {"id": "system_design_002", "type": "canonical", "en": "multi-region data replication strategy for a global payment platform", "ko": "글로벌 결제 플랫폼의 멀티 리전 데이터 복제 전략"},
+      {"id": "system_design_003", "type": "canonical", "en": "api gateway infrastructure capable of handling one million requests per second", "ko": "초당 백만 요청을 처리하는 API 게이트웨이 인프라"},
+      {"id": "system_design_004", "type": "canonical", "en": "order processing architecture combining event sourcing and cqrs patterns", "ko": "이벤트 소싱과 CQRS를 결합한 주문 처리 아키텍처"},
+      {"id": "system_design_005", "type": "canonical", "en": "kubernetes multi-cluster resource isolation and quota design", "ko": "쿠버네티스 멀티 클러스터 리소스 격리와 쿼터 설계"},
+      {"id": "system_design_006", "type": "canonical", "en": "compare distributed cache consistency models and their tradeoffs", "ko": "분산 캐시 일관성 모델 비교와 트레이드오프"},
+      {"id": "system_design_007", "type": "canonical", "en": "saga pattern transaction handling in a microservices environment", "ko": "마이크로서비스 환경에서의 Saga 패턴 트랜잭션 처리"},
+      {"id": "system_design_008", "type": "edge_case", "en": "our company's system is too complex, i want to clean it up", "ko": "회사 시스템 너무 복잡한데 정리하고 싶어"},
+      {"id": "system_design_009", "type": "edge_case", "en": "the current server architecture won't hold much longer, where do i start", "ko": "지금 서버 구조로는 더 못 버틸 것 같은데 어디부터 손대지"},
+      {"id": "system_design_010", "type": "edge_case", "en": "the team is talking about splitting up the service, how should we start", "ko": "팀에서 서비스를 쪼개자는 얘기가 나오는데 어떻게 시작해야 할까"}
+    ],
+    "general": [
+      {"id": "general_001", "type": "canonical", "en": "recommend lunch options near my office for today", "ko": "오늘 사무실 근처에서 점심 먹을 만한 곳 추천"},
+      {"id": "general_002", "type": "canonical", "en": "weekend getaway destinations near seoul worth visiting", "ko": "서울 근교 주말 나들이로 가볼 만한 곳"},
+      {"id": "general_003", "type": "canonical", "en": "recommend currently trending korean drama series to watch", "ko": "요즘 인기 있는 한국 드라마 시리즈 추천"},
+      {"id": "general_004", "type": "canonical", "en": "practical tips to fix dog separation anxiety behavior at home", "ko": "강아지 분리불안 행동을 집에서 교정하는 실용적 팁"},
+      {"id": "general_005", "type": "canonical", "en": "how to care for indoor potted plants during the winter", "ko": "겨울철 실내 화분 관리 방법"},
+      {"id": "general_006", "type": "canonical", "en": "recommend a lightweight laptop model under two kilograms", "ko": "2kg 미만의 가벼운 노트북 모델 추천"},
+      {"id": "general_007", "type": "canonical", "en": "suggest a musical instrument that is easy to pick up as a hobby", "ko": "취미로 시작하기 좋은 악기 추천"},
+      {"id": "general_008", "type": "edge_case", "en": "i'm a bit bored, anything to chat about", "ko": "그냥 좀 심심해서 뭐 얘기할 거 없나"},
+      {"id": "general_009", "type": "edge_case", "en": "the weather's so nice today, what should i do with it", "ko": "오늘 날씨 너무 좋다 뭐 하면서 보낼까"},
+      {"id": "general_010", "type": "edge_case", "en": "a place a friend recommended wasn't great, can you suggest somewhere else", "ko": "친구가 추천한 가게가 별로였는데 다른 데 알려줄래"}
+    ]
+  }
+}

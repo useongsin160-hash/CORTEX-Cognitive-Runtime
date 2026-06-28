@@ -1,0 +1,420 @@
+[
+  {
+    "id": 501,
+    "query": "계속해",
+    "expected_bypass": true,
+    "scenario": "ko_continuation_active_goal",
+    "requires_session": true,
+    "note": "단순 계속 cue — active_goal 있으면 bypass"
+  },
+  {
+    "id": 502,
+    "query": "이어서 해줘",
+    "expected_bypass": true,
+    "scenario": "ko_continuation_active_goal",
+    "requires_session": true,
+    "note": "이어서 패턴"
+  },
+  {
+    "id": 503,
+    "query": "그다음 해줘",
+    "expected_bypass": true,
+    "scenario": "ko_continuation_active_goal",
+    "requires_session": true,
+    "note": "그다음 키워드"
+  },
+  {
+    "id": 504,
+    "query": "다음 단계로 가자",
+    "expected_bypass": true,
+    "scenario": "ko_continuation_active_goal",
+    "requires_session": true,
+    "note": "다음 단계 복합 패턴"
+  },
+  {
+    "id": 505,
+    "query": "방금 거 계속 진행해줘",
+    "expected_bypass": true,
+    "scenario": "ko_continuation_active_goal",
+    "requires_session": true,
+    "note": "방금 + 계속 복합"
+  },
+  {
+    "id": 506,
+    "query": "아까 거 이어서",
+    "expected_bypass": true,
+    "scenario": "ko_continuation_active_goal",
+    "requires_session": true,
+    "note": "아까 키워드"
+  },
+  {
+    "id": 507,
+    "query": "고고",
+    "expected_bypass": true,
+    "scenario": "ko_continuation_active_goal",
+    "requires_session": true,
+    "note": "고고 구어체"
+  },
+  {
+    "id": 508,
+    "query": "ㄱㄱ",
+    "expected_bypass": true,
+    "scenario": "ko_continuation_active_goal",
+    "requires_session": true,
+    "note": "ㄱㄱ 초성 단축"
+  },
+  {
+    "id": 509,
+    "query": "다음 페이즈 진행해줘",
+    "expected_bypass": true,
+    "scenario": "ko_continuation_active_goal",
+    "requires_session": true,
+    "note": "다음 페이즈 패턴"
+  },
+  {
+    "id": 510,
+    "query": "그러자, 계속 해볼게",
+    "expected_bypass": true,
+    "scenario": "ko_continuation_active_goal",
+    "requires_session": true,
+    "note": "그러자 + 계속 복합"
+  },
+  {
+    "id": 511,
+    "query": "continue",
+    "expected_bypass": true,
+    "scenario": "en_continuation_active_goal",
+    "requires_session": true,
+    "note": "영어 continue"
+  },
+  {
+    "id": 512,
+    "query": "let's go",
+    "expected_bypass": true,
+    "scenario": "en_continuation_active_goal",
+    "requires_session": true,
+    "note": "영어 구어체"
+  },
+  {
+    "id": 513,
+    "query": "next step please",
+    "expected_bypass": true,
+    "scenario": "en_continuation_active_goal",
+    "requires_session": true,
+    "note": "next step 패턴"
+  },
+  {
+    "id": 514,
+    "query": "ok, proceed",
+    "expected_bypass": true,
+    "scenario": "en_continuation_active_goal",
+    "requires_session": true,
+    "note": "ok + proceed"
+  },
+  {
+    "id": 515,
+    "query": "keep going",
+    "expected_bypass": true,
+    "scenario": "en_continuation_active_goal",
+    "requires_session": true,
+    "note": "keep going"
+  },
+  {
+    "id": 516,
+    "query": "go on",
+    "expected_bypass": true,
+    "scenario": "en_continuation_active_goal",
+    "requires_session": true,
+    "note": "go on"
+  },
+  {
+    "id": 517,
+    "query": "resume",
+    "expected_bypass": true,
+    "scenario": "en_continuation_active_goal",
+    "requires_session": true,
+    "note": "resume"
+  },
+  {
+    "id": 518,
+    "query": "next",
+    "expected_bypass": true,
+    "scenario": "en_continuation_active_goal",
+    "requires_session": true,
+    "note": "next 단독"
+  },
+  {
+    "id": 521,
+    "query": "계속해",
+    "expected_bypass": false,
+    "scenario": "no_session_id",
+    "requires_session": false,
+    "note": "session_id 없음 → bypass 불가"
+  },
+  {
+    "id": 522,
+    "query": "이어서",
+    "expected_bypass": false,
+    "scenario": "no_session_id",
+    "requires_session": false,
+    "note": "session_id 없음"
+  },
+  {
+    "id": 523,
+    "query": "continue",
+    "expected_bypass": false,
+    "scenario": "no_session_id",
+    "requires_session": false,
+    "note": "영어 — session_id 없음"
+  },
+  {
+    "id": 524,
+    "query": "next step",
+    "expected_bypass": false,
+    "scenario": "no_session_id",
+    "requires_session": false,
+    "note": "next step — session_id 없음"
+  },
+  {
+    "id": 525,
+    "query": "고고",
+    "expected_bypass": false,
+    "scenario": "no_session_id",
+    "requires_session": false,
+    "note": "구어체 — session_id 없음"
+  },
+  {
+    "id": 526,
+    "query": "계속 진행해줘",
+    "expected_bypass": false,
+    "scenario": "no_session_id",
+    "requires_session": false,
+    "note": "session_id 없음 — normal path"
+  },
+  {
+    "id": 531,
+    "query": "계속해",
+    "expected_bypass": false,
+    "scenario": "no_active_goal",
+    "requires_session": true,
+    "seed_goal": false,
+    "note": "active_goal 없음 → bypass 불가"
+  },
+  {
+    "id": 532,
+    "query": "이어서 해줘",
+    "expected_bypass": false,
+    "scenario": "no_active_goal",
+    "requires_session": true,
+    "seed_goal": false,
+    "note": "active_goal 없음"
+  },
+  {
+    "id": 533,
+    "query": "continue",
+    "expected_bypass": false,
+    "scenario": "no_active_goal",
+    "requires_session": true,
+    "seed_goal": false,
+    "note": "영어 — active_goal 없음"
+  },
+  {
+    "id": 534,
+    "query": "next step",
+    "expected_bypass": false,
+    "scenario": "no_active_goal",
+    "requires_session": true,
+    "seed_goal": false,
+    "note": "next step — active_goal 없음"
+  },
+  {
+    "id": 535,
+    "query": "다음 단계로",
+    "expected_bypass": false,
+    "scenario": "no_active_goal",
+    "requires_session": true,
+    "seed_goal": false,
+    "note": "active_goal 없으면 bypass 없음"
+  },
+  {
+    "id": 536,
+    "query": "resume",
+    "expected_bypass": false,
+    "scenario": "no_active_goal",
+    "requires_session": true,
+    "seed_goal": false,
+    "note": "active_goal 없음 — normal path"
+  },
+  {
+    "id": 541,
+    "query": "다음 주 일정 알려줘",
+    "expected_bypass": false,
+    "scenario": "false_positive_guard",
+    "requires_session": true,
+    "note": "다음 단독(복합 아님) — continuation 아님"
+  },
+  {
+    "id": 542,
+    "query": "완료 보고서 작성해줘",
+    "expected_bypass": false,
+    "scenario": "false_positive_guard",
+    "requires_session": true,
+    "note": "완료 + 보고서 — completion 아님"
+  },
+  {
+    "id": 543,
+    "query": "finish_reason이 뭐야",
+    "expected_bypass": false,
+    "scenario": "false_positive_guard",
+    "requires_session": true,
+    "note": "finish_reason 기술 용어 — completion 아님"
+  },
+  {
+    "id": 544,
+    "query": "next time에 하자",
+    "expected_bypass": false,
+    "scenario": "false_positive_guard",
+    "requires_session": true,
+    "note": "next time — 단순 next와 다름"
+  },
+  {
+    "id": 545,
+    "query": "그거 뭐였지",
+    "expected_bypass": false,
+    "scenario": "false_positive_guard",
+    "requires_session": true,
+    "note": "그거 단독 — continuation 제외 대상"
+  },
+  {
+    "id": 546,
+    "query": "completion rate는 어떻게 계산해",
+    "expected_bypass": false,
+    "scenario": "false_positive_guard",
+    "requires_session": true,
+    "note": "completion 단어 포함하지만 기술 맥락"
+  },
+  {
+    "id": 547,
+    "query": "이제 뭐 할까",
+    "expected_bypass": false,
+    "scenario": "false_positive_guard",
+    "requires_session": true,
+    "note": "이제 단독 — goal_creation 아니고 continuation 아님"
+  },
+  {
+    "id": 548,
+    "query": "book a meeting",
+    "expected_bypass": false,
+    "scenario": "false_positive_guard",
+    "requires_session": true,
+    "note": "book 내부 ok — word-boundary 보호"
+  },
+  {
+    "id": 551,
+    "query": "계속해",
+    "expected_bypass": true,
+    "scenario": "multi_session_same_cue",
+    "requires_session": true,
+    "session_id": "step6-sess-A",
+    "goal_category": "coding",
+    "note": "sess-A: 계속해 → bypass, category=coding"
+  },
+  {
+    "id": 552,
+    "query": "계속해",
+    "expected_bypass": true,
+    "scenario": "multi_session_same_cue",
+    "requires_session": true,
+    "session_id": "step6-sess-B",
+    "goal_category": "writing",
+    "note": "sess-B: 계속해 → bypass, category=writing (다른 세션)"
+  },
+  {
+    "id": 553,
+    "query": "continue",
+    "expected_bypass": true,
+    "scenario": "multi_session_same_cue",
+    "requires_session": true,
+    "session_id": "step6-sess-C",
+    "goal_category": "math_logic",
+    "note": "sess-C: continue → bypass, category=math_logic"
+  },
+  {
+    "id": 554,
+    "query": "계속해",
+    "expected_bypass": false,
+    "scenario": "multi_session_same_cue",
+    "requires_session": true,
+    "session_id": "step6-sess-D",
+    "seed_goal": false,
+    "note": "sess-D: active_goal 없음 → bypass 불가"
+  },
+  {
+    "id": 555,
+    "query": "next",
+    "expected_bypass": true,
+    "scenario": "multi_session_same_cue",
+    "requires_session": true,
+    "session_id": "step6-sess-E",
+    "goal_category": "system_design",
+    "note": "sess-E: next → bypass, category=system_design"
+  },
+  {
+    "id": 556,
+    "query": "이어서",
+    "expected_bypass": true,
+    "scenario": "multi_session_same_cue",
+    "requires_session": true,
+    "session_id": "step6-sess-F",
+    "goal_category": "general",
+    "note": "sess-F: 이어서 → bypass, category=general"
+  },
+  {
+    "id": 561,
+    "query": "수정해줘, 아까 거 틀렸어",
+    "expected_bypass": false,
+    "scenario": "correction_cue",
+    "requires_session": true,
+    "note": "correction cue — continuation bypass 아님"
+  },
+  {
+    "id": 562,
+    "query": "다 했어, 완료",
+    "expected_bypass": false,
+    "scenario": "completion_cue",
+    "requires_session": true,
+    "note": "completion cue — continuation bypass 아님"
+  },
+  {
+    "id": 563,
+    "query": "새로운 목표 만들어줘",
+    "expected_bypass": false,
+    "scenario": "goal_creation_cue",
+    "requires_session": true,
+    "note": "goal_creation cue — continuation bypass 아님"
+  },
+  {
+    "id": 564,
+    "query": "actually, I was wrong",
+    "expected_bypass": false,
+    "scenario": "correction_cue",
+    "requires_session": true,
+    "note": "영어 correction — bypass 아님"
+  },
+  {
+    "id": 565,
+    "query": "done",
+    "expected_bypass": false,
+    "scenario": "completion_cue",
+    "requires_session": true,
+    "note": "영어 completion — bypass 아님"
+  },
+  {
+    "id": 566,
+    "query": "new goal: build a web app",
+    "expected_bypass": false,
+    "scenario": "goal_creation_cue",
+    "requires_session": true,
+    "note": "영어 goal creation — bypass 아님"
+  }
+]

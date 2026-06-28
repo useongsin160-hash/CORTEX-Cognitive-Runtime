@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cortex-aev"
+version = "0.1.0"
+description = "CORTEX-AEV: Autonomous cognitive control middleware (All Established Version)"
+readme = "README.md"
+# 재현 빌드 (OVERTURE A4): 직접 의존성을 lock 기준 인터프리터(.venv Python 3.11.9)의
+# 실설치 버전으로 == 고정한다. 외부 lock 도구 없이 이 pyproject 가 의존성의 단일 진실
+# 공급원(SSOT)이다 — 구 requirements.txt 는 A4 에서 삭제(드리프트 영구 차단).
+#   재현 절차:  python3.11 -m venv .venv  &&  .venv/Scripts/pip install -e ".[dev]"
+#   검증 범위:  3.11.9 에서만 실측 검증됨. 3.12~3.14 는 허용하되 미검증(requires-python 상한 참고).
+#   범위 규칙:  transitive(딸려오는) 패키지는 고정하지 않는다 — 직접 의존성만 == 핀(유지보수성).
+#               OS 전용 직접 의존성은 없다(colorama 등은 transitive) → environment marker 불요.
+requires-python = ">=3.11,<3.15"
+license = { text = "Proprietary" }
+authors = [
+    { name = "CORTEX-AEV Team" },
+]
+dependencies = [
+    "fastapi==0.136.3",
+    "uvicorn[standard]==0.48.0",
+    "aiosqlite==0.22.1",
+    "pydantic==2.13.4",
+    "pydantic-settings==2.14.1",
+    "chromadb==1.5.9",
+    "python-dotenv==1.2.2",
+    "sentence-transformers==5.5.1",
+    "httpx==0.28.1",  # 런타임 의존성(protocol adapters + demo httpx 프록시). A4 에서 [dev]→런타임 정합 교정.
+    "apscheduler==3.11.2",  # B4: RPE 자동 rollback scheduler(AsyncIOScheduler). legacy→런타임 승격(A4 약속 이행).
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.0.3",
+    "pytest-asyncio==1.4.0",
+    "ruff>=0.3",  # 린트 전용. 이 환경 미설치 → 런타임 재현과 무관해 == 핀에서 제외(>= 유지).
+]
+# legacy/cortex_3_1 전용 잔재 — 현행 app/ 런타임은 import 하지 않는다(사용처 0). 현행 핀
+# 세트([project.dependencies])에 넣지 않으려고 별도 그룹으로 강등한다(미사용을 현행인 척
+# 하지 않는다). 레거시 트리 구동 시에만 `pip install .[legacy]`. 실제 제거는 A6(리포 위생)로 분리.
+# apscheduler 는 B4 에서 현행 런타임 의존성으로 승격됨(위 [project.dependencies]) — 더는 미사용 아님.
+legacy = [
+    "google-genai==2.7.0",
+    "tiktoken==0.13.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]
+exclude = ["legacy*", "tests*", "scripts*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
