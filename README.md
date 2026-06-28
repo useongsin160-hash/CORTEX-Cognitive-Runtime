@@ -1,5 +1,7 @@
 # CORTEX 5.0 OVERTURE
 
+**한국어** | [English](./README.en.md)
+
 **Cognitive Orchestration Runtime for Task EXecution**
 
 > CORTEX는 LLM 요청을 단순 호출로 흘려보내지 않고, **입력 정제 → 의미 평가 → 난이도 기반 라우팅
